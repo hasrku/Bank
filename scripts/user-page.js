@@ -10,6 +10,8 @@ function showPopupMessage(message, type) {
     // }, 1500);
 }
 
+/* this code segment authenticates using JWT this is commented out because server is offline
+
 document.addEventListener('DOMContentLoaded', async () => {
     const token = localStorage.getItem('authToken');
 
@@ -44,6 +46,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         window.location.href = '/login.html';
     }
 });
+
+*/
 
 // Logout Functionality
 document.getElementById('logout-btn').addEventListener('click', () => {
