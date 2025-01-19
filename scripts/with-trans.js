@@ -1,3 +1,4 @@
+/* this code segment authenticates using JWT this is commented out because server is offline
 document.addEventListener('DOMContentLoaded', async () => {
     const token = localStorage.getItem('authToken');
 
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         window.location.href = '/login.html';
     }
 });
-
+*/
 
 newloan = document.getElementById('withdraw')
 depCont = document.getElementById('deposit')
