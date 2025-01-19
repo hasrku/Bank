@@ -106,7 +106,7 @@ document.getElementById("submit-login").addEventListener("click", async (event) 
     setTimeout(() => {
         window.location.href = "/user-page.html";
     }, 1000);
-}
+})
 
 /* for demo puposes this code section is commented out as backend server is offline 
     when server gets online remove the above "submit-login" EventListener
