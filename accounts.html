@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/accounts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- <script src="/scripts/loan-page.js" defer></script> -->
+    <script src="/scripts/accounts.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="popup-message" ></div>
+    <div class="navbar">
+        
+        <a href="/" class="logo"><span class="material-symbols-outlined">savings</span><h4>Sahakaari Bank</h4></a>
+        
+
+        <div class="spacer"></div>
+        <div class="bk">
+            <div><a href="/user-page.html"><i class="fa-regular fa-user"></i> Dashboard</a></div>
+        </div>
+    </div>
+
+    <div class="greetings">
+        <i class="fa-regular fa-user"></i>
+        <h2><span></span> Personal Accounts </h2>
+        <button onclick="showform();"><span class="material-symbols-outlined">add_circle</span> New Account</button>
+    </div>
+
+    <div id="new-loan">
+        <div class="form-cont">
+            <h1>Account Details</h1>
+            <form action="">
+                <div class="name type">
+                    <i class="material-symbols-outlined">currency_rupee</i>
+                    <select name="plan" id="source_w">
+                        <option value="none" selected disabled hidden>Select an Option</option>
+                        <option value="Current">Currrent</option>
+                        <option value="Savings">Savings</option>
+                        <option value="Fixed">Fixed</option>
+                    </select>
+                </div>
+            </form>
+            <button>Submit</button>
+        </div>
+        <div id="overlay"></div>
+    </div>
+
+    <div class="loan-accounts">
+        <h2>Your Accounts</h2>
+        <table id="accounts-table">
+            <thead>
+                <tr>
+                    <th>Account No.</th>
+                    <th>Type</th>
+                    <th>Balance</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="accounts-body">
+                <!-- Account rows will be populated here -->
+                
+            </tbody>
+        </table>
+        <div id="transactions-section">
+            <h3>Transactions for A/C No: <span id="curr-acc"></span></h3>
+            <table id="transactions-table">
+                <thead>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Type</th>
+                        <th>Destination A/C No.</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="transactions-body">
+                    <!-- Transaction rows will be populated here -->
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+        
+    </div>
+    <div class="foot">
+        <p>Cookie Policy</p>
+        <p>Disclaimer</p>
+        <p>Privacy Policy</p>
+        <p>Terms & Conditions</p>
+        <div class="spacer"></div>
+        <p>© Sahakaari Bank . All rights reserved</p>
+    </div>
+</body>
+</html>

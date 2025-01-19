@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/with-trans.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="/scripts/loan-page.js" defer></script>
+    <script src="/scripts/with-trans.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="popup-message" ></div>
+    <div class="navbar">
+        <a href="/" class="logo"><span class="material-symbols-outlined">savings</span><h4>Sahakaari Bank</h4></a>
+
+        <div class="spacer"></div>
+        <div class="bk">
+
+            <div><a href="/user-page.html"><i class="fa-regular fa-user"></i> Dashboard</a></div>
+        </div>
+    </div>
+
+    <div class="greetings">
+        <i class="fa-solid fa-money-bill-transfer"></i>
+        <h2><span></span> Withdraw / Deposit / Transfer </h2>
+    </div>
+
+
+    <hr>
+
+    <div class="cards-cont">
+        <button onclick="showWithdrawForm();" class="cards">
+            <i class="material-symbols-outlined">currency_rupee_circle</i>
+            <h3>Withdraw</h3>
+        </button>
+        <button onclick="showDepositForm();" class="cards">
+            <i class="material-symbols-outlined">publish</i>
+            <h3>Deposit</h3>
+        </button>
+        <button onclick="showTransForm();" class="cards">
+            <i class="fa-solid fa-money-bill-transfer"></i>
+            <h3>Transfer</h3>
+        </button>
+    </div>
+
+    <div id="withdraw">
+        <div class="form-cont">
+            <h1>Withdraw Details</h1>
+            <form action="">
+                <div class="name mob">
+                    <i class="material-symbols-outlined">person</i>
+                    <!-- <input type="text"  placeholder="Account No." required> -->
+                    <select name="plan" id="waccount" required>
+                        <option value="none" selected disabled hidden>Select an Account</option>
+                    </select>
+                </div>
+                <div class="name mob">
+                    <i class="material-symbols-outlined">currency_rupee</i>
+                    <input type="text" id="wamount"  placeholder="Amount" required>
+                </div>
+            </form>
+            <button id="submit-withdraw">Submit</button>
+        </div>
+        <div id="overlay"></div>
+    </div>
+
+    <div id="deposit">
+        <div class="form-cont">
+            <h1>Deposit Details</h1>
+            <form action="">
+                <div class="name mob">
+                    <i class="material-symbols-outlined">person</i>
+                    <!-- <input type="text"  placeholder="Account No." required> -->
+                    <select name="plan" id="daccount" required>
+                        <option value="none" selected disabled hidden>Select an Account</option>
+                    </select>
+                </div>
+                <div class="name mob">
+                    <i class="material-symbols-outlined">currency_rupee</i>
+                    <input type="text" id="damount"  placeholder="Amount" required>
+                </div>
+            </form>
+            <button id="submit-deposit">Submit</button>
+        </div>
+        <div id="overlay2"></div>
+    </div>
+        
+    <div id="transfer">
+        <div class="form-cont">
+            <h1>Transfer Details</h1>
+            <form action="">
+                <div class="name mob">
+                    <i class="material-symbols-outlined">person</i>
+                    <!-- <input type="text"  placeholder="Account No." required> -->
+                    <select name="plan" id="taccount" required>
+                        <option value="none" selected disabled hidden>Select an Account</option>
+                    </select>
+                </div>
+                <div class="name mob">
+                    <i class="material-symbols-outlined">person</i>
+                    <input type="text" id="tdaccount"  placeholder="Enter Destination A/C No." required>
+                </div>
+                <div class="name mob">
+                    <i class="material-symbols-outlined">currency_rupee</i>
+                    <input type="text" id="tamount"  placeholder="Amount" required>
+                </div>
+            </form>
+            <button id="submit-transfer">Submit</button>
+        </div>
+        <div id="overlay3"></div>
+    </div>
+
+    <div class="foot">
+        <p>Cookie Policy</p>
+        <p>Disclaimer</p>
+        <p>Privacy Policy</p>
+        <p>Terms & Conditions</p>
+        <div class="spacer"></div>
+        <p>© Sahakaari Bank . All rights reserved</p>
+    </div>
+</body>
+</html>

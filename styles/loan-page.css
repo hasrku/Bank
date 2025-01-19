@@ -1,0 +1,303 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    background-color: antiquewhite;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#popup-message {
+    width: 40vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: -50%; /* Start above the viewport */
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0; /* Start with opacity 0 */
+    transition: transform 1s ease, opacity 0.5s ease; /* Smooth drop and fade-in */
+}
+
+#popup-message.show {
+    top: 10px; /* Move down to visible area */
+    opacity: 1; /* Fade in */
+    transform: translateX(-50%) translateY(10px); /* Adjust final position */
+}
+
+#popup-message.success {
+    background-color: #4CAF50; /* Green for success */
+}
+
+#popup-message.error {
+    background-color: #f44336; /* Red for error */
+}
+
+.navbar{
+    /* background-color: rgb(0, 145, 208); */
+    background-image: linear-gradient(to right, rgb(0, 145, 208) , rgb(6, 180, 255));
+    padding: 6px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px -10px black;
+}
+.navbar a{
+    text-decoration: none;
+}
+.logo{
+    padding: 0px 20px;
+    /* border: 1px solid red; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+.logo span{
+    font-size: 35px;
+    margin: 0 15px 0 0;
+}
+.spacer{
+    flex-grow: 1;
+}
+.login-btn button{
+    border: none;
+    padding: 13px 35px;
+    color: white;
+    background-color: rgb(0, 105, 150);
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 0px 20px;
+    transition: all 0.2s;
+}
+.login-btn:hover, .navbar a:hover{
+    box-shadow: 0px 0px 10px -4px rgb(134, 134, 134);
+}
+.bk a{
+    text-decoration: none;
+    color: white;
+    /* margin: 0 20px 0 0 ; */
+    background-color: rgb(0, 105, 150);
+    padding: 15px 18px;
+    border-radius: 50px;
+}
+
+.greetings{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 0 0 0 5%;
+    margin: 10px 0 0px 0;
+}
+.greetings i{
+    margin: 0 20px 0 0;
+    background-color: rgb(0, 123, 175);
+    color: white;
+    padding: 8px;
+    border-radius: 25px;
+}
+.greetings span{
+    font-size: 1.2rem;
+}
+.greetings h1{
+    margin: 0 0;
+}
+.greetings button{
+    margin-left: auto;
+    margin-right: 35px;
+    background-color: rgb(0, 123, 175);
+    color: white;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.greetings button span{
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+
+}
+.greetings button:hover{
+    box-shadow: 0px 0px 10px 0px rgb(134, 134, 134);
+}
+
+#overlay, #overlay2{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 500;
+}
+#new-loan , #loan-payment-form{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-cont{
+    z-index: 999;
+    margin: 10px 0;
+    width: max-content;
+    height: max-content;
+    background-color: white;
+    padding: 20px 50px;
+    border-radius: 20px;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px -2px rgb(134, 134, 134);
+}
+.form-cont h3{
+    margin: 0;
+    margin-bottom: 20px;
+}
+.form-cont form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 0 20px 0;
+    /* width: 90%; */
+}
+.form-cont button{
+    margin: 30px 0 0 0;
+    border: none;
+    padding: 13px 35px;
+    color: white;
+    background-color: rgb(0, 117, 167);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin: 0px 20px;
+}
+.name {
+    display: flex;
+    margin: 15px;
+}
+.name i{
+    font-size: 35px;
+    margin: 0 10px 0 0 ;
+}
+.name input{
+    font-size: 1.1rem;
+    padding: 5px;
+    border-radius: 8px;
+    width: 100%;
+}
+.name select{
+    font-size: 1.1rem;
+    padding: 5px ;
+    border-radius: 8px;
+    border: 2px solid black;
+    width: 20vw;
+}
+.name input,
+.name select {
+    width: 20vw; 
+    padding: 6px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-sizing: border-box; /* Ensures padding and borders are included in the width */
+    font-size: 1.05rem;
+}
+
+
+
+
+.foot{
+    /* margin-top: 20px; */
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    padding: 0 0;
+    position:static;
+    bottom: 0;
+    width: 100vw;
+}
+.foot p{
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+/* Table Styling */
+.loan-accounts{
+    width: 90%;
+    margin: 0 auto;
+    /* align-content: center; */
+    flex-grow: 1;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 16px;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50; /* Header background */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#loan-body td:nth-child(4){
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #e9f5e9; /* Hover effect */
+}
+
+td {
+    color: #333; /* Text color for rows */
+}
+
+.loan-accounts button {
+    padding: 8px 12px;
+    background-color: #4CAF50; /* Button color matching header */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.loan-accounts button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

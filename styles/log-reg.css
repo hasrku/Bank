@@ -1,0 +1,240 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background-image: linear-gradient(to right, rgb(149, 220, 250) , rgb(198, 234, 250));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+#popup-message {
+    position: fixed;
+    top: -50px; /* Start above the viewport */
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0; /* Start with opacity 0 */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth drop and fade-in */
+}
+
+#popup-message.show {
+    top: 10px; /* Move down to visible area */
+    opacity: 1; /* Fade in */
+    transform: translateX(-50%) translateY(10px); /* Adjust final position */
+}
+
+#popup-message.success {
+    background-color: #4CAF50; /* Green for success */
+}
+
+#popup-message.error {
+    background-color: #f44336; /* Red for error */
+}
+
+
+.navbar{
+    /* background-color: rgb(0, 145, 208); */
+    background-image: linear-gradient(to right, rgb(0, 145, 208) , rgb(6, 180, 255));
+    padding: 6px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px -10px black;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+.navbar a{
+    text-decoration: none;
+}
+.logo{
+    padding: 0px 20px;
+    /* border: 1px solid red; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+.logo span{
+    font-size: 35px;
+    margin: 0 15px 0 0;
+}
+.spacer{
+    flex-grow: 1;
+}
+.bk a{
+    text-decoration: none;
+    color: white;
+    margin: 0 50px 0 0 ;
+    background-color: rgb(0, 105, 150);
+    padding: 15px;
+    border-radius: 25px;
+}
+.form-cont{
+    margin: 10px 0;
+    width: max-content;
+    height: max-content;
+    /* height: max-content; */
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px -2px rgb(134, 134, 134);
+}
+.form-cont h1{
+    margin: 0 0 20px 0;
+}
+.msg{
+    /* width: 50%; */
+    font-size: 0.8rem;
+    text-align: start;
+    margin: 0 0 20px 0;
+}
+.msg span{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+.btn button{
+    margin: 30px 0 0 0;
+    flex-grow: 1;
+    border: none;
+    padding: 13px 35px;
+    color: white;
+    background-color: rgb(0, 105, 150);
+    border-radius: 12px;
+    cursor: pointer;    
+    transition: all 0.2s;
+    margin: 0px 20px;
+    width: 20vw;
+}
+.form-cont button:hover{
+    scale: 1.01;
+    background-color: rgb(0, 117, 167);
+    box-shadow: 0px 0px 10px -5px rgb(134, 134, 134);
+}
+.form-cont button:active{
+    scale: 1;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.username{
+    width: 90%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.username i{
+    font-size: 1.5rem;
+    margin: 0 20px;
+}
+.username input{
+    padding: 8px;
+    font-size: 1.4rem;
+    border-radius: 10px;
+}
+.password{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.show-password{
+    position: absolute;
+    right: 3%;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+}
+.show-password img{
+    width: inherit;
+}
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.name i{
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+.add{
+    margin: 0 5px;
+}
+.name input{
+    font-size: 1.1rem;
+    padding: 10px;
+    max-width: 150px;
+    border-radius: 10px;
+}
+#register-form{
+    height:max-content;
+    width: 50vw;
+}
+#register-form input{
+    font-size: 0.8rem;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+}
+#register-form button{
+    /* margin: 0px 0 0 0; */
+    border: none;
+    padding: 13px 35px;
+    color: white;
+    background-color: rgb(0, 105, 150);
+    border-radius: 8px;
+    cursor: pointer;    
+    transition: all 0.2s;
+    /* margin: 0px 20px; */
+}
+#register-form button:hover{
+    background-color: rgb(0, 117, 167);
+    scale: 1.01;
+}
+#register-form .msg{
+    margin: 0;
+}
+.name-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.foot{
+    /* margin-top: 20px; */
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    padding: 0 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+.foot p{
+    margin: 0 20px;
+    cursor: pointer;
+}

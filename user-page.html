@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/user-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="/scripts/user-page.js" defer></script>
+    <title>Customer Page</title>
+</head>
+<body>
+    <div id="popup-message" ></div>
+    <div class="navbar">
+        <a href="/" class="logo"><span class="material-symbols-outlined">savings</span><h4>Sahakaari Bank</h4></a>
+
+        <div class="spacer"></div>
+        <!-- <div class="login-btn"><button>Register</button></div> -->
+        <!-- <div><a href="/index.html"><i class="fa-solid fa-house"></i></a></div> -->
+        <div class="login-btn"><button id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></div>
+    </div>
+
+    <div class="greetings">
+        <i class="fa-regular fa-user"></i>
+        <!-- <span>hi, </span><h2 id="cust-name"> Customer Name </h2> -->
+         <h2 id="cust-name"> Customer Name </h2>
+    </div>
+
+    <div class="cards-cont">
+        <a href="accounts.html" class="cards">
+            <i class="material-symbols-outlined">account_balance</i>
+            <h3>Accounts</h3>
+        </a>
+        <a href="loan-page.html" class="cards">
+            <i class="material-symbols-outlined">money_bag</i>
+            <h3>Loans</h3>
+        </a>
+        <a href="with-trans.html" class="cards">
+            <i class="fa-solid fa-money-bill-transfer"></i>
+            <h3>Transfer / Deposit</h3>
+        </a>
+    </div>
+
+
+    <div class="foot">
+        <p>Cookie Policy</p>
+        <p>Disclaimer</p>
+        <p>Privacy Policy</p>
+        <p>Terms & Conditions</p>
+        <div class="spacer"></div>
+        <p>© Sahakaari Bank . All rights reserved</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/loan-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="/scripts/loan-page.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="popup-message" ></div>
+    <div class="navbar">
+        <a href="/" class="logo"><span class="material-symbols-outlined">savings</span><h4>Sahakaari Bank</h4></a>
+
+        <div class="spacer"></div>
+        <div class="bk">
+
+            <div><a href="/user-page.html"><i class="fa-regular fa-user"></i> Dashboard</a></div>
+        </div>
+    </div>
+
+    <div class="greetings">
+        <i class="material-symbols-outlined">money_bag</i>
+        <h2><span></span> Loan Accounts </h2>
+        <button onclick="showform();"><span class="material-symbols-outlined">add_circle</span> New Loan</button>
+    </div>
+
+    <div id="new-loan">
+        <div class="form-cont">
+            <h1>Loan Details</h1>
+            <form action="">
+                <div class="name mob">
+                    <i class="material-symbols-outlined">currency_rupee</i>
+                    <input type="text" id="amt"  placeholder="Amount" required>
+                </div>
+                <div class="name mob">
+                    <i class="material-symbols-outlined">person</i>
+                    <select name="plan" id="account">
+                        <option value="none" selected disabled hidden>Select an Account</option>
+                    </select>
+                </div>
+                <div class="name mob">
+                    <i class="fa-regular fa-clock"></i>
+                    <input type="number" id="duration"  placeholder="Number Of Months" required>
+                </div>
+            </form>
+            <button id="submit-loan">Submit</button>
+        </div>
+        <div id="overlay"></div>
+    </div>
+
+    <div id="loan-payment-form">
+        <div class="form-cont">
+            <h1>Loan Payment Details</h1>
+            <h3>paying for Loan ID: <span id="curr-loanid"></span></h3>
+            <form action="">
+                <div class="name mob">
+                    <i class="material-symbols-outlined">person</i>
+                    <!-- <input type="text"  placeholder="Account No." required> -->
+                    <select name="plan" id="taccount" required>
+                        <option value="none" selected disabled hidden>Select an Account</option>
+                    </select>
+                </div>
+                <div class="name mob">
+                    <i class="material-symbols-outlined">currency_rupee</i>
+                    <input type="text" id="tamount"  placeholder="Amount" required>
+                </div>
+            </form>
+            <button id="submit-loan-payment">Submit</button>
+        </div>
+        <div id="overlay2"></div>
+    </div>
+
+    <div class="loan-accounts">
+        <h2>Your Loans</h2>
+        <table id="loans-table">
+            <thead>
+                <tr>
+                    <th>Loan ID</th>
+                    <th>Account No.</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Interest</th>
+                    <th>Outstanding Amt.</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="loans-body">
+                <!-- Account rows will be populated here -->
+                
+            </tbody>
+        </table>
+
+        <div id="transactions-section">
+            <h3>Transactions for Loan ID: <span id="curr-loan"></span></h3>
+            <table id="transactions-table">
+                <thead>
+                    <tr>
+                        <th>Loan Payment ID</th>
+                        <th>Amount</th>
+                        <th>Acount No.</th>
+                        <th>Outstanding Amt.</th>
+                    </tr>
+                </thead>
+                <tbody id="transactions-body">
+                    <!-- Transaction rows will be populated here -->
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="foot">
+        <p>Cookie Policy</p>
+        <p>Disclaimer</p>
+        <p>Privacy Policy</p>
+        <p>Terms & Conditions</p>
+        <div class="spacer"></div>
+        <p>© Sahakaari Bank . All rights reserved</p>
+    </div>
+    
+</body>
+</html>

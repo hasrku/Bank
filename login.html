@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/log-reg.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="/scripts/log-reg.js" defer></script>
+    <title>Login</title>
+</head>
+<body>
+    <!-- Popup message container -->
+    <div id="popup-message" ></div>
+    <div class="navbar">
+        <a href="/" class="logo"><span class="material-symbols-outlined">savings</span><h4>Sahakaari Bank</h4></a>
+
+        <div class="spacer"></div>
+        <div class="bk">
+
+            <div><a href="/index.html"><i class="fa-solid fa-house"></i></a></div>
+        </div>
+    </div>
+    <div class="form-cont" id="login-form">
+        <h1>Login</h1>
+        <form action="" >
+            <div class="username">
+                <i class="fa-regular fa-user"></i>
+                <input id="cid" type="text" placeholder="Customer ID" required>
+            </div>
+            <div class="username password">
+                <i class="fa-solid fa-lock"></i>
+                <input id="passlog" type="password" placeholder="Password" required>
+                <!-- <input type="checkbox" id="show-password"> -->
+                <!-- <img src="images/closed.png" alt="" id="show-password"> -->
+                <div class="show-password" id="open"><img src="images/open.png"></div>
+                <div class="show-password" id="clos"><img src="images/closed.png"></div>
+            </div>
+        </form>
+        <div class="msg"><p>new customer ? <span id="regnow">Register Now</span></p></div>
+        <div class="btn"><button id="submit-login">Sign In</button></div>
+        
+    </div>
+
+    <div class="form-cont" id="register-form">
+        <h1>Register</h1>
+        <form action="" >
+            <div class="name-cont">
+
+                <div class="name">
+                    <i class="fa-regular fa-user"></i>
+                    <input id="fname" type="text" placeholder="First Name" required>
+                </div><div class="name">
+                    <i class="fa-regular fa-user"></i>
+                    <input id="mname" type="text" placeholder="Middle Name" required>
+                </div><div class="name">
+                    <i class="fa-regular fa-user"></i>
+                    <input id="lname" type="text" placeholder="Last Name" required>
+                </div>
+            </div>
+            <div class="name-cont">
+
+                <div class="name date">
+                    <i  class="fa-regular fa-calendar-days"></i>
+                    <input id="dob" type="date" placeholder="Date Of Birth" required>
+                </div>
+                <div class="name mob">
+                    <i class="fa-solid fa-phone"></i>
+                    <input id="mobnum" type="text" maxlength="10"  placeholder="Moblie Number" required>
+                </div>
+                <div class="name add">
+                    <i class="fa-solid fa-house"></i>
+                    <input id="addres" type="text" placeholder="Address" required>
+                </div>
+            </div>
+            <div class="name pass">
+                <i class="fa-solid fa-lock"></i>
+                <input id="passw" type="text" placeholder="Password" required>
+            </div>
+        </form>
+        <div class="msg"><p>already a customer ? <span id="loginnow">Login Now</span></p></div>
+        <div class="btn"><button id="submit-btn">Sign Up</button></div>
+        
+    </div>
+
+    <div class="foot">
+        <p>Cookie Policy</p>
+        <p>Disclaimer</p>
+        <p>Privacy Policy</p>
+        <p>Terms & Conditions</p>
+        <div class="spacer"></div>
+        <p>© Sahakaari Bank . All rights reserved</p>
+    </div>
+</body>
+</html>
