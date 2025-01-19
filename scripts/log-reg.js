@@ -99,6 +99,17 @@ function showPopupMessage(message, type) {
     }, 1500);
 }
 
+// this is alternative for offline server just for frontend Demo
+document.getElementById("submit-login").addEventListener("click", async (event) => {
+    event.preventDefault();
+    showPopupMessage("Login successful!", "success");
+    setTimeout(() => {
+        window.location.href = "/user-page.html";
+    }, 1000);
+}
+
+/* for demo puposes this code section is commented out as backend server is offline 
+    when server gets online remove the above "submit-login" EventListener
 document
     .getElementById("submit-login")
     .addEventListener("click", async (event) => {
@@ -142,3 +153,4 @@ document
             );
         }
     });
+*/
