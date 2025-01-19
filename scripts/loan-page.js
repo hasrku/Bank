@@ -35,6 +35,7 @@ function showPymentform(){
     loanPayFrom.style.display = "flex";
 }
 
+/* this code segment authenticates using JWT this is commented out because server is offline
 document.addEventListener('DOMContentLoaded', async () => {
     const token = localStorage.getItem('authToken');
 
@@ -72,7 +73,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         window.location.href = '/login.html';
     }
 });
-
+*/
 
 async function loadAccounts() {
     const token = localStorage.getItem("authToken");
